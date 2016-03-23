@@ -1,0 +1,34 @@
+{
+  "name": "bestmatch",
+  "version": "1.0.0",
+  "description": "Wildcards but reverse",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.2.2"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sielay/bestmatch.git"
+  },
+  "keywords": [
+    "widlcard",
+    "reverse",
+    "match",
+    "hashmap",
+    "keys",
+    "best",
+    "match",
+    "find"
+  ],
+  "author": "lukaszsielski@sgmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sielay/bestmatch/issues"
+  },
+  "homepage": "https://github.com/sielay/bestmatch#readme"
+}
