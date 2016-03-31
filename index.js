@@ -9,13 +9,17 @@ function escapeRegexp(str) {
 
 module.exports = function (list, filter) {
     var parts = filter.split('*'),
-        lowest = -1,
+        lowest = null,
         best;
     list.forEach(function (rule) {
         var regexp = new RegExp(escapeRegexp(rule).replace(/\\\*/g, '(.+)')),
+            weight = rule.split('*').filter(function (part) {
+                return part.length;
+            }).length,
             match = filter.match(regexp);
-        if (match && (lowest === -1 || match.length < lowest)) {
-            lowest = match.length;
+
+        if (match && (lowest === null || (match.length - weight) < lowest)) {
+            lowest = match.length - weight;
             best = rule;
         }
     });

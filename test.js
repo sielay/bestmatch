@@ -38,4 +38,17 @@ describe('Best Match', function () {
         });
     });
 
+    it('1.1.0 - `*.something` over `*` for `abc.something`', function () {
+        let hashmap = [
+            'type:*',
+            'hero:online:en',
+            'hero:offline:en',
+            '*',
+            '*:online:pl',
+            '*:offline:pl'
+        ],
+            filter = '*:online:pl';
+        lib(hashmap, filter).should.be.eql('*:online:pl');
+    });
+
 });
